@@ -1,0 +1,61 @@
+/*Barra de navegación Main html*/
+#BarraNavegacion {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    background-color: cadetblue;
+    
+};
+
+#BarraNavegacion ul {
+  display: inline-block;  
+};
+
+
+#BarraNavegacion a {
+    text-decoration: none;
+    width: auto;
+    text-align: center;
+    display: block;
+    float: left;
+}
+
+/*#Efectos*/
+#BarraNavegacion li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+/*Barra de navegación Main html*/
+
+
+
+/*descuentos.html*/
+#CajaDescuento{
+    background-color: cornsilk;
+    border:solid 2px #ddd; 
+    margin-right: 30%;
+    margin-left: 30%;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5px;
+    
+}
+
+#bodyDescuentos {
+    text-align: center;
+}
+
+.botonNormal {
+    border-radius: 5px;
+    background-color: azure;
+    padding: 5px;
+    
+}
+
+.botonNormal:hover {
+    background-color: rgba(0,0,0,0.2);
+    
+}
