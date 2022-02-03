@@ -24,9 +24,10 @@ function calcularPromedio(list){ //function used at mediana.js
    );
 
    const promedioArray = sumaLista / list.length;
-   return promedioArray/2;
+   return promedioArray;
 };
 
+//Calculadora de mediana
 function medianaSalariosCol(list){
     const mitad = parseInt(list.length /2);
 
@@ -38,9 +39,28 @@ function medianaSalariosCol(list){
         return mediana;
 
     }else{
-        const personaMitad = lista[mitad];
+        const personaMitad = list[mitad];
         return personaMitad;
     }
 };
 
 console.log(medianaSalariosCol(salariosColSorted));
+
+
+//Mediana del top 10%
+const spliceStart = (salariosColSorted.length * 90)/100;
+
+const spliceCount = salariosColSorted.length - spliceStart;
+
+//Splice recive two parameters, the first one is the cutter, and the
+//second one want to say how much numbers we want to take out. 
+//THE PROBLEM WITH THIS METHOS IS THAT THE METHOD MODIFY OUR ORIGINAL ARRAY
+//INSTED OF USE THIS WE CAN USE SLICE
+const salariosColTop10 = salariosColSorted.splice(
+    spliceStart,
+    spliceCount,
+);
+
+const medianaTop10Col = medianaSalariosCol(salariosColTop10);
+
+console.log(medianaTop10Col);
